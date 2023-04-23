@@ -1,0 +1,42 @@
+<!-- https://flask.palletsprojects.com/en/latest/patterns/fileuploads/ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The DEW</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+</head>
+<body>
+
+<div class="header">
+  <h2>The DEW</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+        <h2>Upload New Image!</h2>
+        <p>Upload any images you have that forward the Toroidal Earth cause and prove our case! We might even use them in our articles!</p>
+        <br>
+        <br>
+        <form method=post enctype=multipart/form-data>
+        <input type=file name=file>
+        <input type=submit value=Upload>
+      </form>
+     <br>
+      {% if message %}
+        <p>{{ message }}</p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+       <ul>
+         <li><a href="/">Home</a></li>
+         <li><a class="active" href="/upload">Upload Image</a></li>
+         <li><a href="/upload">Login</a></li>
+         <li><a href="/images/earth.jpg">DON'T CLICK</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

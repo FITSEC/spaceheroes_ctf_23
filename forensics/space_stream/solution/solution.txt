@@ -1,0 +1,11 @@
+use datastreams to retrieve the flag from the folder called data_stream.
+using other methods to retrieve the pdf file might result in a corrupted file.
+
+command:
+expand data_stream:stream5.pdf
+
+the password should be the name of one of the hints: Sarah_Karrigan
+
+if you want to use this in virsh install virtualbox & qemu-img
+vboxmanage clonemedium starstream.vhd out.img --format raw
+qemu-img convert -f raw out.img -O qcow out.qcow2

@@ -1,0 +1,1 @@
+stack install --no-strip --install-ghc --local-bin-path . --allow-different-use

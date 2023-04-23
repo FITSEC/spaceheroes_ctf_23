@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sanity Check in Space Page IV - I'm afraid I can't let you do that Gabriel</title>
+</head>
+<body>
+  <img src="{{ url_for('static', filename='spice.jpeg') }}" alt="DDD">
+  <!-- The password is "FearIsTheMindKiller" -->
+  <p>{{ message }}</p>
+  {% if error %}
+    <p style="color: red">{{ error }}</p>
+  {% endif %}
+  <form method="POST">
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

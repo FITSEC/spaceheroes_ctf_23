@@ -1,0 +1,152 @@
+/* https://www.smashingmagazine.com/2012/05/building-real-time-commenting-system/ */
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #383838;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: grey;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+li a.active {
+  background-color: grey;
+  color: black;
+}
+
+a.article {
+  cursor: pointer;
+  text-decoration: none;
+  color: grey;
+}
+
+p.main {
+  font-size: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+p.side {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+label {
+  font-size: 17px;
+}
+
+button {
+  background: grey;
+  border: black;
+  cursor: pointer;
+}
+
+/* Header/Blog Title */
+.header {
+  color: grey;
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: black;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  height: 200px;
+  width: 100%;
+  padding: 20px;
+}
+
+img.main {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+img.side {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+/* Add a card effect for articles */
+.card {
+   color: grey;
+   background-color: black;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* style for navbar */
+/*.navbar*/
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 5px;
+  text-align: center;
+  background: black;
+  color: grey;
+  margin-top: 20px;
+}
+
+#respond input[type='text'],
+#respond textarea {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  background-color: #505050;
+  border: black;
+  color: white;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}

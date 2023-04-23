@@ -1,0 +1,1 @@
+tigress --Environment=x86_64:Linux:Gcc:4.6 --Transform=JitDynamic --Functions=ZG9uJ3QgZXZlbiBib3RoZXI --out=result.c ./thanks.c && gcc -o bin result.c && strip -N ZG9uJ3QgZXZlbiBib3RoZXI bin -o thanks4allthefish

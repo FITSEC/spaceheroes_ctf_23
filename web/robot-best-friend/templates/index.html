@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<!-- Inspired by https://codepen.io/carlreed37f/pen/vmWQpR -->
+<head>
+    <title>Dragon Ball Z App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Ravi+Prakash" rel="stylesheet">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <style>
+        body{
+            overflow: hidden;
+            background: blue;
+        }
+        iframe {
+            border: none;
+            height: 100vh;
+            width: 33.33vw;
+        }
+        .banner-left {
+            float: left;
+            width: 33.33%;
+            padding: 10px;
+            font-family: 'Ravi Prakash', cursive;
+            -webkit-text-stroke: 2px black;
+            font-size: 60px;
+            font-weight: 500;
+            box-sizing: border-box;
+            height: 100vh;
+
+        }
+
+        .banner-left p {
+            color: yellow;
+            background: linear-gradient(to bottom, yellow 0%, red 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: scroll 30s linear 0s infinite;
+            transform-origin: 20% 0%;
+            transform-style: preserve-3d;
+            transform: rotateY(30deg);
+
+        }
+
+        .banner-center {
+            display: inline-block;
+            width: 33.33%;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            position: relative;
+        }
+
+        .banner-right {
+            height: 100vh;
+            float: right;
+            width: 33.33%;
+            padding: 10px;
+            box-sizing: border-box;
+            position: relative;
+            background-image: url("http://vignette2.wikia.nocookie.net/fictional-battle-omniverse/images/8/8b/Goku_Dragon_Ball_Z.png/revision/latest?cb=20150508010447");
+            background-size: contain;
+            background-repeat: no-repeat;
+
+        }
+        .banner-right:hover {
+            background-image: url(http://vignette3.wikia.nocookie.net/vsbattles/images/5/56/Goku_%28Base%29.png/revision/latest?cb=20160315175220)
+        }
+        @keyframes scroll {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="banner-left">
+    <p> Dragon Ball Z is the story of the greatest hero ever, Goku! He's a Saiyan warrior from the planet Vegeta, but he
+        came to Earth as a baby and was raised by a kind-hearted man named Grandpa Gohan. Goku has spiky black hair and
+        wears an orange gi, and he's always smiling and happy. But don't let that fool you – when he's fighting bad
+        guys, he's serious and focused.
+
+        The show starts with Goku all grown up and married to a girl named Chi-Chi. They have a son named Gohan, who's a
+        bit shy and nerdy but also really strong – he inherited his dad's Saiyan blood. Goku's best friend is a short
+        bald guy named Krillin, who's also a really powerful martial artist. Together, they have lots of adventures and
+        fight all kinds of bad guys.
+
+        The first big bad guy they face is Raditz, Goku's evil brother. He comes to Earth to try to convince Goku to
+        join him in conquering other planets, but Goku refuses. So Raditz kidnaps Gohan and forces Goku to fight him.
+        The fight is intense – Raditz is much stronger than Goku, and Krillin and the other Z-Fighters (that's what they
+        call themselves) can't help much. But Goku uses a powerful technique called the Kamehameha to defeat Raditz, at
+        the cost of his own life.
+
+        After Goku dies, he goes to the afterlife and trains with a martial arts master named King Kai. Meanwhile, two
+        more Saiyans arrive on Earth – Vegeta and Nappa. Vegeta is the prince of all Saiyans and he's really arrogant
+        and evil. But he's also really strong – he's even stronger than Raditz was. The Z-Fighters try to stop him, but
+        they're no match. Finally, Goku comes back to life thanks to a wish made with the Dragon Balls, and he arrives
+        just in time to fight Vegeta. The battle is epic – they destroy entire cities with their energy attacks, but
+        Goku eventually wins with a new technique called the Spirit Bomb.
+
+        But the battles never end for the Z-Fighters. They face all kinds of other enemies, like the androids Dr. Gero
+        creates to destroy Goku, and the evil wizard Babidi who tries to awaken a monster called Majin Buu. But no
+        matter how tough the enemy is, Goku always finds a way to win. He even reaches a new level of power called Super
+        Saiyan 3, where he has long golden hair and can create massive shockwaves just by powering up!
+
+        Along the way, Goku meets all kinds of other powerful warriors, like the Namekian Piccolo (who used to be a
+        villain but becomes a good guy), the prince of a race of aliens called Frieza (who Goku defeats after an epic
+        battle), and the god of destruction Beerus (who's not really a villain, just a guy who likes to fight strong
+        opponents). Goku also has another son named Goten, who looks just like him and is really strong even though he's
+        just a kid.
+
+        But the most important thing about Goku is that he never gives up. He's always trying to get stronger, always
+        pushing himself to the limit, always finding new ways to win. He even sacrifices himself twice to save his
+        friends and family! And he's always kind and compassionate, even to his enemies. That's why I think Goku is the
+        greatest hero ever – he's not just strong, he's also a good person.
+
+        So that's Dragon Ball Z in a nutshell. It's a show about fighting and adventure, but it's also a story about
+        friendship, love, and the power of determination. Goku is the heart and soul of the series – he's the reason we
+        keep watching, the reason we cheer when he wins, and the reason we cry when he dies.
+
+        One of the things that makes Goku so great is his unwavering optimism. No matter how dire the situation, he
+        always believes that he and his friends can win. When he first learns about the androids, he's not afraid – he's
+        excited to have a challenge. When he's facing Majin Buu, he doesn't give up even when it seems like there's no
+        hope left. And even when he's up against Beerus, a god who's much stronger than him, he never loses his faith in
+        himself.
+
+        But it's not just Goku who makes Dragon Ball Z great. There are so many other characters who are just as
+        memorable and lovable. Krillin is always there to make us laugh with his jokes and his bald head. Vegeta starts
+        out as a villain but becomes a fan favorite thanks to his snarky attitude and his love for his family. Piccolo
+        is the tough but caring mentor who teaches Gohan how to fight. And of course, there's the hilarious and loveable
+        Hercule Satan, the world champion who thinks he's a hero but really has no idea what's going on.
+
+        One of the other things that makes Dragon Ball Z so popular is the fight scenes. They're intense, they're
+        creative, and they're always over-the-top. There's nothing quite like watching Goku and Vegeta clash in a battle
+        that destroys entire planets, or seeing Gohan transform into a Super Saiyan 2 and defeat Cell with a single
+        blow. The fights are always epic, but they're also full of heart. We care about these characters, and we want
+        them to win.
+
+        In the end, Dragon Ball Z is a classic for a reason. It's a show that's filled with excitement, humor, and
+        heart. And at the center of it all is Goku, the hero we all wish we could be. He's strong, he's kind, and he
+        never gives up. He's the perfect role model for kids (and adults) everywhere. So if you've never watched Dragon
+        Ball Z, do yourself a favor and give it a try. You won't regret it. And if you're already a fan, then you know
+        what I'm talking about – there's nothing quite like the feeling of watching Goku triumph over another impossible
+        challenge. </p>
+</div>
+
+<div class="banner-center">
+
+    <div></div>
+    <iframe height=  id="main-iframe" src="/chatView"></iframe>
+
+</div>
+
+<div class="banner-right">
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+There is one function name "r" which takes
+
+which take first 9 character of input value and subtracts 4 from their ASCII values
+
+another function take next 9 character of input and convert it into ascii
+
+again next 9 character of the string pass to the function which subtracts 4 from their ASCII values
+
+and at the end it check with the strings(which will be the same if enter the correct) which will be hardcoded saved into the binary and the string would be our flag
+  
+shctf{5ky_1s_n0t_th3_l1m1t}

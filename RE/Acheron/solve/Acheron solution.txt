@@ -1,0 +1,6 @@
+1. Run the code
+2. The code asks for input in the form of N, E, S, or W. 
+3. Open the binary in an IDA.
+4. Read the chain of if statements to discover the required path
+5. The path is a series of XORed values, ASCII values, and simple math equations to get N, E, S, or W
+6. The solution is NENWSSEWSNENSSWEENWSNNESS

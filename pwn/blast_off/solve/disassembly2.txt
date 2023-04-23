@@ -1,0 +1,6 @@
+0:  55                      push   rbp
+1:  48 89 e5                mov    rbp,rsp
+4:  48 83 ec 50             sub    rsp,0x50
+8:  89 7d bc                mov    DWORD PTR [rbp-0x44],edi
+b:  89 75 b8                mov    DWORD PTR [rbp-0x48],esi
+e:  89 55 b4                mov    DWORD PTR [rbp-0x4c],edx

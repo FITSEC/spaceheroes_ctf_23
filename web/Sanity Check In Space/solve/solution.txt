@@ -1,0 +1,18 @@
+1. Visit the index page
+
+2. Visit /robots.txt
+
+3. The robots.txt shows leads you to /humans.txt
+
+4. The page hints at eating food. Visiting the page creates a 'human' 
+cookie, change this to true. This leads the player to /arrakis
+
+5. The page asks for a password, visit the page source to see the password 
+commented in the html. The password is "FearIsTheMindKiller". This tell 
+the player to visit /krypton
+
+6. The page features an input box with a 'ping' function. Input a valid 
+url and a semicolon and ls to see that 'flag.txt' is in the directory. Do 
+the same command but with 'cat flag.txt' to obtain the flag.
+
+

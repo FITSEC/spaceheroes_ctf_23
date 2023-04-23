@@ -1,0 +1,62 @@
+```
+00000000  55                 push    rbp {__saved_rbp}
+00000001  4889e5             mov     rbp, rsp {__saved_rbp}
+00000004  4883ec30           sub     rsp, 0x30
+00000008  007ddc             add     byte [rbp-0x24 {var_2c_1} {var_2c}], bh
+0000000b  8975d8             mov     dword [rbp-0x28 {var_30}], esi
+0000000e  8955d4             mov     dword [rbp-0x2c {var_34}], edx
+00000011  48b82f62696e2f63…  mov     rax, 0x7461632f6e69622f
+0000001b  488945f6           mov     qword [rbp-0xa {var_12}], rax  {0x7461632f6e69622f}
+0000001f  66c745fe0000       mov     word [rbp-0x2 {var_a}], 0x0
+00000025  48b82f666c61672e…  mov     rax, 0x78742e67616c662f
+0000002f  488945ec           mov     qword [rbp-0x14 {var_1c}], rax  {0x78742e67616c662f}
+00000033  66c745f47400       mov     word [rbp-0xc {var_14}], 0x74
+00000039  837ddc03           cmp     dword [rbp-0x24 {var_2c}], 0x3
+0000003d  0f8500000000       jne     0x43
+
+00000043  bf01000000         mov     edi, 0x1
+00000048  b800000000         mov     eax, 0x0
+⚠️0000004d  e8d5feffff         call    0xffffffffffffff27
+00000052  488d056e0e0000     lea     rax, [rel 0xec7]
+00000059  4889c7             mov     rdi, rax  {0xec7}
+0000005c  b800000000         mov     eax, 0x0
+⚠️00000061  e8b1feffff         call    0xffffffffffffff17
+00000066  837dd802           cmp     dword [rbp-0x28], 0x2
+0000006a  0069bf             add     byte [rcx-0x41], ch
+0000006d  0100               add     dword [rax], eax
+0000006f  0000               add     byte [rax], al
+00000071  b800000000         mov     eax, 0x0
+⚠️00000076  e8acfeffff         call    0xffffffffffffff27
+0000007b  488d054a0e0000     lea     rax, [rel 0xecc]
+00000082  4889c7             mov     rdi, rax  {0xecc}
+00000085  b800000000         mov     eax, 0x0
+⚠️0000008a  e888feffff         call    0xffffffffffffff17
+0000008f  837dd401           cmp     dword [rbp-0x2c {var_34}], 0x1
+00000093  752f               jne     0xc4
+
+00000095  bf01000000         mov     edi, 0x1
+0000009a  b800000000         mov     eax, 0x0
+⚠️0000009f  e883feffff         call    0xffffffffffffff27
+000000a4  488d05260e0000     lea     rax, [rel 0xed1]
+000000ab  4889c7             mov     rdi, rax  {0xed1}
+⚠️000000ae  e844feffff         call    0xfffffffffffffef7
+000000b3  488d05240e0000     lea     rax, [rel 0xede]
+000000ba  4889c7             mov     rdi, rax  {0xede}
+⚠️000000bd  e845feffff         call    0xffffffffffffff07
+000000c2  eb31               jmp     0xf5
+
+000000c4  488d05240e0000     lea     rax, [rel 0xeef]
+000000cb  4889c7             mov     rdi, rax  {0xeef}
+⚠️000000ce  e824fe00ff         call    0xffffffffff00fef7
+000000d3  eb20               jmp     0xf5
+
+000000d5                 48 8d 05 13 0e 00 00 48 00 c7 e8       H......H...
+000000e0  13 fe ff ff eb 0f 48 8d 05 02 0e 00 00 48 89 c7  ......H......H..
+000000f0  e8 02 fe ff ff                                   .....
+
+000000f5  90                 nop     
+000000f6  c9                 leave    {__saved_rbp}
+000000f7  c3                 retn     {__return_addr}
+
+000000f8                          00 00 00 48 83 ec 08 48          ...H...H
+```

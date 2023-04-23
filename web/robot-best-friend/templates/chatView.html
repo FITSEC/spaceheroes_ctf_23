@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+textarea {
+  outline: none;
+  border: none;
+  border-left: 1px solid #777;
+  border-right: 1px solid #777;
+  border-bottom: 1px solid #777;
+  margin: 0;
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  left: 0;
+  right: 0;  width:-moz-available; height:100%;
+  resize: none;
+}
+    </style>
+    <script>
+        function sendRequest() {
+            const userInput = document.getElementById("user-input").value;
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "/chat");
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onload = function () {
+                const responseTextArea = document.getElementById("response-text-area");
+                responseTextArea.value = xhr.responseText;
+                const submitButton = document.getElementById("submit-button");
+                submitButton.disabled = false;
+            };
+            const submitButton = document.getElementById("submit-button");
+            submitButton.disabled = true;
+            xhr.send("user_input=" + encodeURIComponent(userInput));
+        }
+    </script>
+</head>
+  <body>
+    <form >
+      <label for="user-input">User Input:</label>
+      <input type="text" id="user-input" name="user_input">
+      <button type="button" id="submit-button" onclick="sendRequest()">Submit</button>
+    </form>
+    <br><br>
+    <textarea id="response-text-area" readonly></textarea>
+  </body>
+</html>

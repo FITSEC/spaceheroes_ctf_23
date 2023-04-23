@@ -1,0 +1,17 @@
+Each number has a unique makeup to the number of factors it has 
+and which numbers make up it's factors. Counting the number of 
+times a factor appears as a factor will also provide some insight 
+for the answer. For example, 1 will occur in every factor of a number, 
+2 will occur in 1/2 of the factors, 3 will occur in 1/3 of the 
+factors, etc. You can also reason your way through some numbers based 
+on their factors. Say for example you knew a number's factors 
+were 1, 2, 4, 8, and 💩 you'd know that 💩 represents 16. For the numbers
+that are not determinable based on the factors of the number, more 
+specifically large primes that don't appear in any factors until you
+look at the factors of numbers n+1 bits in size. For example, 149 is an
+8 bit prime where it does not appear as another number's factors 
+until 258 and 447, both 9 bit numbers.
+
+All input must be in emojis. The numbers are given to access the right menu 
+and the valid bit size for option 3⃣. Option 2⃣ is a red herring due to the
+ability to reason the prime numbers with the above mentioned approach.

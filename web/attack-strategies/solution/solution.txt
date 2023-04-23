@@ -1,0 +1,8 @@
+In order to solve, change show_hidden cookie to true and post a request to read the right flag.txt file to retrieve the flag.
+
+the payload should look like:
+
+{
+folder_select: (any of the folders)
+file_select: ../flag.txt
+}

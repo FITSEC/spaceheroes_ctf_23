@@ -1,0 +1,1 @@
+gcc engine_failure.c -o engine_failure  -fno-stack-protector -z noexecstack -z relro -no-pie

@@ -1,0 +1,1 @@
+shctf{get_zerg_rushed_nb}

@@ -1,0 +1,8 @@
+first extract image with binwalk or foremost
+find zip file (87v2112p.zip) 
+zip file password protected
+password can be found in metadata (password:- baby_but_strong)
+in zip file there is 4 file (4 parts of zip files - using split cmd)
+concatenate parts with cat cmd (cat file1 file2 > test.gif)
+extract img of gif using ffmpeg (ffmpeg -i test1  output_%d.png)
+read character of flag from the images 

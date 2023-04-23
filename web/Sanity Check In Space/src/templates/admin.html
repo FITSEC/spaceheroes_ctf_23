@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Secret Sanity Check Page - </title>
+    <style>
+      html, body {
+        height: auto;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-image: url('{{ url_for("static", filename="mil.jpg") }}');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        height: auto;
+      }
+      .top {
+        margin-top: 50px;
+        margin-bottom: -20px;
+      }
+      h1 {
+        font-size: 48px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+      }
+      p {
+        font-size: 24px;
+        color: white;
+      }
+      img {
+        max-width: 60%;
+        height: auto;
+        margin: 10px auto;
+        display: block;
+        margin-top: 50px;
+      }
+      h2 {
+        font-size: 36px;
+        color: white;
+        text-shadow: 2px 2px 4px #000000;
+        margin-top: 50px;
+        margin-bottom: -20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="top">
+      <h1>Welcome to the secret easter egg Sanity Check in Space page.</h1>
+      <p>There is no progression for the challenge here, so go back to actually move the challenge forward.</p>
+      <h2 style="margin-top: 20px;">Cyberspace counts as space too.</h2>
+      </div>
+      <img src="{{ url_for('static', filename='mik.png') }}" alt="bestgirl">
+    </div>
+  </body>
+</html>

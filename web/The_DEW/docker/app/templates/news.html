@@ -1,0 +1,137 @@
+<!-- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_blog_layout -->
+<!-- https://www.smashingmagazine.com/2012/05/building-real-time-commenting-system/ -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The DEW</title>
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.0/socket.io.js"></script>
+  <script src="/static/js/comment.js"></script>
+</head>
+<body>
+
+<div class="header">
+  <h2>The DEW</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>&emsp;Welcome to The DEW</h2>
+      <img class="main" src="/images/toroidal_earth.png" alt="The Toroid">
+      <p class="main">Venerated Visitor,</p>
+      <p class="main">
+        &emsp;Welcome to the <b>Donut Earth Wiki</b>, otherwise known as <b>The DEW</b>. This website is
+        dedicated to unraveling the true mysteries of the universe and demonstrating that the earth is a <b>donut</b>
+        and that <i>Round</i> and <i>Flat Earth</i> doctrines are little more than elaborate hoaxes.
+        </br>
+        </br>
+        &emsp;The <b>Donut Earth Society</b> has dedicated itself to starting science afresh from the ground up, to
+        begin to see the world without bias and assumption. Experiment and experience has shown that the earth
+        is decidedly shaped like a delectable donut. Time and time again through test, trial, and experiment,
+        it has been shown that the earth is not a whirling globe of popular credulity, but an endless toros of
+        times immaterial.
+        </br>
+        </br>
+        &emsp;Much of the firm and well-thought evidence for a <b>Toroidal Earth</b> is provided by the esteemed Varaug, a
+        modern day forum user of FlatEarthSociety.org who should be giving lectures at the prominent universities
+        of the day. His circumstantial evidence is very easily understandable and requires only common sense
+        to conclude that we live on the <i>"tastiest celestial body, our sugar-glazed planet Earth."</i> As eloquently
+        put by the esteemed Varaug, <i>"Imagine a donut. Imagine a jam donut. Gravity acts towards the jam."</i> More
+        such wisdom can be found <a href="https://www.theflatearthsociety.org/forum/index.php?topic=54383.0">here</a>.
+        </br>
+        </br>
+        &emsp;Throughout the years it has become a duty of each Donut Earth Society member, to meet the common
+        <i>Round</i> and <i>Flat Earthers</i> in the open, avowed, and unyielding rebellion; to declare that their reigns of
+        error and confusion are over; and that henceforth, like a falling dynasty, they must shrink and
+        disappear, leaving the throne and the kingdom of science and philosophy to those awakening intellects
+        whose numbers are constantly increasing, and whose march is rapid and irresistible. The soldiers of
+        truth and reason of the <b>Donut Earth Society</b> have drawn the sword, and ere another generation has been
+        educated and grown to maturity, will have forced the usurpers to abdicate. Like the decayed and
+        crumbling trees of an ancient forest, rent and shattered by wind and storm, the hypothetical
+        philosophies, which have hitherto cumbered the civilized world, are unable to resist the elements of
+        experimental and logical criticism; and sooner or later must succumb to their assaults. The spear is
+        reared for a final strike - it is about to fall through the primitive sphere of the earth, and the blow
+        will surely <i>"pierce the cumberer through!"</i>
+      </p>
+    </div>
+    <div class="card">
+      <div id="respond">
+
+        <h2>Let us know what you think of the Toroidal Earth!</h2>
+        <p>And waive the admin to this page if you see any comments pushing the <i>Round</i> or <i>Flat</i> doctrines!</p>
+        <form id="comment-form">
+
+          <label for="comment-author" class="required">Your name:</label>
+          <input type="text" name="comment-author" id="comment-author" value="" tabindex="1" required="required">
+
+          <label for="comment" class="required">Your message:</label>
+          <textarea name="comment" id="comment-input" rows="5" tabindex="4"  required="required"></textarea>
+
+          <button type="submit">Submit</button>
+          <button id="refresh">Refresh Feed</button>
+          <button id="waive">Waive Admin</button>
+        </form>
+      </div>
+    </div>
+    {% autoescape false %}
+    {% for comment in comments %}
+    <div class="card">
+      {{ comment }}
+    </div>
+    {% endfor %}
+    {% endautoescape %}
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+       <ul>
+         <li><a class="active" href="/">Home</a></li>
+         <li><a href="/upload">Upload Image</a></li>
+         <li><a href="/">Login</a></li>
+         <li><a href="images/earth.jpg">DON'T CLICK</a></li>
+      </ul> 
+    </div>
+    <div class="card">
+      <h2>Articles</h2>
+      <a class="article" href="/">
+        <h4><u>The Icing Wall</u></h4>
+        <img class="side" src="/images/the_ice_wall.jpg">
+        <p class="side">
+          Learn about the "ice wall" that Flat Earthers claim exists, knowing full well that it is actually more
+          like an "icing wall".
+        </p>
+      </a>
+      <a class="article" href="/">
+        <h4><u>The Toroidal Orbit</u></h4>
+        <img class="side" src="/images/toroidal_orbit.png">
+        <p class="side">
+          Delve into the real way that the Earth orbits and how the sunlight travels through and around our planet,
+          bringing us the day and night that Round Earthers claim can only be possible for a round Earth.
+        </p>
+      </a>
+      <a class="article" href="/">
+        <h4><u>The Jam's Pull</u></h4>
+        <img class="side" src="/images/toroidal_gravity.png">
+        <p class="side">
+          Come along as we dispel the myths that so called "scientists" claim about how gravity would REALLY work on
+          the donut shaped Earth.
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h3><i>The DEW for YOU</i></h3>
+</div>
+<!-- SOURCE: /source -->
+</body>
+</html>
+<!-- Images used: -->
+<!-- https://www.lifepersona.com/why-is-it-called-blue-planet-earth -->
+<!-- http://gigazine.net/news/20140207-doughnut-earth/ -->
+<!-- https://gigazine.net/news/20140207-doughnut-earth -->
+<!-- https://www.businessinsider.com/antarctica-larsen-c-iceberg-history-2017-7 -->
+<!-- https://www.discovery.com/science/donut-shaped-planet -->

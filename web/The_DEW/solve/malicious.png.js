@@ -1,0 +1,11 @@
+document.getElementById('comment-author').value='AnotherUser';
+document.getElementById('comment-input').value='cookie: '+document.cookie;
+var socket = io.connect('http://' + document.domain + ':' + location.port);
+var author = $('#comment-author').val();
+var comment = $('#comment-input').val();
+console.log('Hellow');
+console.log(author);
+console.log(comment);
+socket.emit('submit comment', {author: author, comment: comment});//{author: author, comment: comment});
+$('#comment-author').val('');
+$('#comment-input').val('');

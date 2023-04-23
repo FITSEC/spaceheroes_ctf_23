@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to my attack strategies</title>
+	<style>
+		pre {
+			white-space: pre-wrap;
+			text-align:center;
+		}
+	</style>
+</head>
+<body style ="background-color: #000000">
+	<h1 style = "color:#16C60C">Welcome to my attack strategies</h1>
+	<form method="POST" action="/">
+		<label style = "color:#16C60C" for="folder_select">Select a folder:</label>
+		<select id="folder_select" name="folder_select">
+			{% for folder_name in folder_names %}
+				<option value="{{ folder_name }}">{{ folder_name }}</option>
+			{% endfor %}
+		</select>
+		<label style = "color:#16C60C" for="file_select">Select a file:</label>
+		<select id="file_select" name="file_select" disabled>
+			<option value="" selected>Select a file...</option>
+			{% for file_name in file_names %}
+				<option value="{{ file_name }}">{{ file_name }}</option>
+			{% endfor %}
+		</select>
+		<input type="submit" value="View" disabled>
+	</form>
+	{% if selected_file_content %}
+		<hr>
+		<h2 style = "color:#16C60C">{{ selected_file_name }}</h2>
+		<pre style = "color:#16C60C">{{ selected_file_content }}</pre>
+	{% endif %}
+	<script>
+		document.getElementById('folder_select').addEventListener('change', function() {
+			var folderSelect = document.getElementById('folder_select');
+			var fileSelect = document.getElementById('file_select');
+			var submitBtn = document.querySelector('input[type="submit"]');
+			var folder = folderSelect.value;
+			if (folder) {
+				fetch('/files/' + folder)
+					.then(response => response.json())
+					.then(data => {
+						fileSelect.innerHTML = '';
+						for (var i = 0; i < data.length; i++) {
+							var option = document.createElement('option');
+							option.value = data[i];
+							option.text = data[i];
+							fileSelect.appendChild(option);
+						}
+						fileSelect.disabled = false;
+						submitBtn.disabled = false;
+					});
+			} else {
+				fileSelect.innerHTML = '<option value="" selected>Select a file...</option>';
+				fileSelect.disabled = true;
+				submitBtn.disabled = true;
+			}
+		});
+	</script>
+</body>
+</html>
+ 
